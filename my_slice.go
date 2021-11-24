@@ -1,11 +1,11 @@
-pakcage main
+package main
 
 import (
     "fmt"
     "time"
- )
+)
  
- func main() {
+func main() {
      fmt.Prinln()
       x := [5]int{5, 4, 3, 2, 1}
       s := x[1:3]
@@ -20,7 +20,7 @@ import (
       
       fmt.Println("And the X slice equals: x={")
          for i := range x {
-              fmt.Print(i, " ")
+              fmt.Print(x[i], " ")
               time.Sleep(1*time.Second)
          }
          fmt.Println("}")
@@ -30,7 +30,16 @@ import (
       time.Sleep(2*time.Second)
       fmt.Println("\nThis is the new slice s = {")
        for j := range new_s {
-           fmt.Print(j, " ")
+           fmt.Print(new_s[j], " ")
         }
         fmt.Println("}")
+     a := []int{3, 6, 7, 2, 9}
+     fmt.Println("This the previous A slice: a={")
+     for k := range a {
+         fmt.Print(a[k], " ")   
+      }
+     fmt.Println("}")
+     
+     a = append(a, 12)
+     fmt.Println("This is the new A slice: ", a)
  }
