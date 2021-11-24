@@ -31,39 +31,35 @@ func mult_divide(m int, n int) (int, int) {
 func main() {
   
   choice := os.Args[1]
-  elem1 := os.Args[2]
-  elem2 := os.Args[3]
-  elem3 := os.Args[4]
+  elem1 := 0
+  elem2 := 0
+  elem3 := 0
   
   if choice == "1" {
-    elem1, err = strconv.Atoi(elem1)
-    elem2, err = strconv.Atoi(elem2)
-    
-    if err == nil {
+    elem1, _ = strconv.Atoi(os.Args[2])
+    elem2, _ = strconv.Atoi(os.Args[3])
+   
       result := plus(elem1, elem2)
       fmt.Printf("The result of adding %d to %d equals:\n", elem1, elem2)
     
       time.Sleep(1*time.Second)
       fmt.Println("\n", os.Args[2], " + ", os.Args[3], " = ", result)
-    }
-  } else if choice == "2" {
-    elem1, err = strconv.Atoi(elem1)
-    elem2, err = strconv.Atoi(elem2)
-    elem3, err = strconv.Atoi(elem3)
     
-    if err == nil {
+  } else if choice == "2" {
+    elem1, _ = strconv.Atoi(os.Args[2])
+    elem2, _ = strconv.Atoi(os.Args[3])
+    elem3, _ = strconv.Atoi(os.Args[4])
+  
       res := addThree(elem1, elem2, elem3)
       fmt.Printf("The result of adding %d and %d to %d equals:\n", elem1, elem2, elem3)
     
       time.Sleep(1*time.Second)
       fmt.Println("\n", os.Args[2], " + ", os.Args[3], " + ", os.Args[4], " = ", res)
-    }
   } else {
-    elem1, err = strconv.Atoi(elem1)
-    elem2, err = strconv.Atoi(elem2)
+    elem1, _ = strconv.Atoi(os.Args[2])
+    elem2, _ = strconv.Atoi(os.Args[3])
     
-    if err == nil {
-      result1, result2 := mult_divide(elem1, elem2)
+    result1, result2 := mult_divide(elem1, elem2)
       fmt.Printf("The result of multiplying, dividing %d and %d equals:\n", elem1, elem2)
     
       time.Sleep(1*time.Second)
@@ -76,6 +72,5 @@ func main() {
         time.Sleep(1*time.Second)
         fmt.Println("\n", os.Args[3], " / ", os.Args[2], " = ", result2)
       }
-    } 
-  }
+    }
 }
