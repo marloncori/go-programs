@@ -1,3 +1,5 @@
 https://gobyexample.com/
 
 https://www.youtube.com/watch?v=siOPdXdQImg&list=PLzMcBGfZo4-mtY_SE3HuzQJzuj4VlUG0q&index=11
+
+https://tutorialedge.net/golang/
