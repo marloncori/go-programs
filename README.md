@@ -1,6 +1,5 @@
 # go-programs
-These Golang sample codes for me to practice this programming language. 
+Golang sample codes and apps which I have written to practice this versatile, 
+powerful and smart programming language. 
 
-WARNING: They may have errors. 
-
-Feel free to use them as you will, though.
+Feel free to take them, improve them as you will.
